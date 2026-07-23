@@ -489,27 +489,18 @@ func startLiveServer(port int) error {
 	fmt.Printf("Press Ctrl+C to stop.\n\n")
 
 	// Auto-open browser
-go func() {
-	time.Sleep(800 * time.Millisecond)
-
-	url := fmt.Sprintf("http://localhost%s", addr)
-
-	var err error
-
-	switch runtimeOS.GOOS {
-	case "windows":
-		err = exec.Command("cmd", "/c", "start", url).Run()
-	case "darwin":
-		err = exec.Command("open", url).Run()
-	default:
-		err = exec.Command("xdg-open", url).Run()
-	}
-
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "failed to open browser: %v\n", err)
-	}
-}()
-	
+	go func() {
+		time.Sleep(800 * time.Millisecond)
+		url := fmt.Sprintf("http://localhost%s", addr)
+		switch runtimeOS.GOOS {
+		case "windows":
+			_ = exec.Command("cmd", "/c", "start", url).Run()
+		case "darwin":
+			_ = exec.Command("open", url).Run()
+		default:
+			_ = exec.Command("xdg-open", url).Run()
+		}
+	}()
 
 	// Serve with silent error handler
 	srv := &http.Server{Handler: http.DefaultServeMux}
