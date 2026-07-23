@@ -1,8 +1,8 @@
-# 🔍 SysScope v0.4
+# SysScope
 
 **Кроссплатформенная утилита полной диагностики компьютера с реальными данными.**
 
-# SysScope
+
 
 [![CI](https://github.com/AndForge/SysScope/actions/workflows/ci.yml/badge.svg)](https://github.com/AndForge/SysScope/actions/workflows/ci.yml)
 [![Go Version](https://img.shields.io/badge/Go-1.22+-00ADD8?logo=go)](...)
