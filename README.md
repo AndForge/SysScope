@@ -6,8 +6,6 @@
 ![Platforms](https://img.shields.io/badge/platforms-Windows%20|%20Linux%20|%20macOS-green)
 ![Tests](https://img.shields.io/badge/tests-13%20passing-brightgreen)
 
-> **НИКАКИХ заглушек, моков или фиктивных данных.** Если информацию получить невозможно — будет явно указана причина.
-
 ## ✨ Что собирает (реальные данные)
 
 | Модуль | Источники Windows | Источники Linux | Источники macOS |
