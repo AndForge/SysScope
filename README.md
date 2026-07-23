@@ -35,20 +35,20 @@ SysScope collects real hardware, software and security information from your com
 
 ## 🚀 Quick Start
 
-## Clone
+### Clone
 
 ```bash
 git clone https://github.com/AndForge/SysScope.git
 cd SysScope
 ```
 
-## Install dependencies
+### Install dependencies
 
 ```bash
 go mod tidy
 ```
 
-## Build
+### Build
 
 ```bash
 go build
@@ -277,6 +277,6 @@ Docker
 
 - GPU, monitors and battery are usually unavailable
 
-# 📄 License
+## 📄 License
 
 MIT License © 2025 AndForge
