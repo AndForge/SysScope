@@ -701,12 +701,7 @@ func loadReport(path string) (*domain.Report, error) {
 	return &r, nil
 }
 
-func trunc(s string, n int) string {
-	if len(s) <= n {
-		return s
-	}
-	return s[:n-3] + "..."
-}
+
 
 func fmtBytes(b uint64) string {
 	const unit = 1024
@@ -727,15 +722,17 @@ func historyDir() string {
 		home = "."
 	}
 	dir := filepath.Join(home, ".sysscope", "history")
-	os.MkdirAll(dir, 0755)
-	return dir
-}
+if err := os.MkdirAll(dir, 0755); err != nil {
+	fmt.Printf("failed to create history directory: %v\n", err)
+}}
 
 func saveToHistory(data []byte, ext string) {
 	dir := historyDir()
 	ts := time.Now().Format("20060102_150405")
 	path := filepath.Join(dir, fmt.Sprintf("scan_%s.%s", ts, ext))
-	os.WriteFile(path, data, 0644)
+	if err := os.WriteFile(path, data, 0644); err != nil {
+	fmt.Printf("failed to save history: %v\n", err)
+}
 }
 
 func listHistory() error {
