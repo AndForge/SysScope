@@ -2,9 +2,11 @@
 
 **Кроссплатформенная утилита полной диагностики компьютера с реальными данными.**
 
-![Go](https://img.shields.io/badge/Go-1.22+-00ADD8?style=flat&logo=go)
-![Platforms](https://img.shields.io/badge/platforms-Windows%20|%20Linux%20|%20macOS-green)
-![Tests](https://img.shields.io/badge/tests-13%20passing-brightgreen)
+# SysScope
+
+[![CI](https://github.com/AndForge/SysScope/actions/workflows/ci.yml/badge.svg)](https://github.com/AndForge/SysScope/actions/workflows/ci.yml)
+[![Go Version](https://img.shields.io/badge/Go-1.22+-00ADD8?logo=go)](...)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](...)
 
 ## ✨ Что собирает (реальные данные)
 
@@ -85,7 +87,7 @@ sysscope/
 
 ```bash
 # Клонировать и собрать
-git clone https://github.com/your-org/sysscope.git
+git clone https://github.com/AndForge/SysScope.git
 cd sysscope
 go mod tidy
 make build
