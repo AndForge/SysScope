@@ -5,8 +5,8 @@
 
 
 [![CI](https://github.com/AndForge/SysScope/actions/workflows/ci.yml/badge.svg)](https://github.com/AndForge/SysScope/actions/workflows/ci.yml)
-[![Go Version](https://img.shields.io/badge/Go-1.22+-00ADD8?logo=go)](...)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](...)
+[![Go Version](https://img.shields.io/badge/Go-1.22+-00ADD8?logo=go)](https://go.dev/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ## ✨ Что собирает (реальные данные)
 
