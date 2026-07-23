@@ -417,7 +417,7 @@ func startLiveServer(port int) error {
 	addr := fmt.Sprintf(":%d", port)
 
 	// Initialize hostname & platform
-	hostname, _ := ""
+	hostname := ""
 	if h, err := hostName(); err == nil {
 		hostname = h
 	}
