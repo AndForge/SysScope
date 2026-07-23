@@ -90,29 +90,34 @@ sysscope/
 git clone https://github.com/AndForge/SysScope.git
 cd sysscope
 go mod tidy
-make build
-
-# Или cross-compile для всех платформ
-make build-all
+go build
 ```
 
 ### Использование
 
 ```bash
-# JSON-отчёт (по умолчанию)
-sysscope scan
-
-# HTML с красивым UI
-sysscope scan --format html
-
-# Указать путь
-sysscope scan -f json -o my_system.json
-
-# Сравнить два отчёта
-sysscope compare scan_20250101.json scan_20250601.json
-
-# Версия
-sysscope version
+# Проверить версию
+.\sysscope.exe version
+# Проверить справку
+.\sysscope.exe --help
+# Проверить summary
+.\sysscope.exe summary
+# Проверить Doctor
+.\sysscope.exe doctor
+# Проверить Scan
+.\sysscope.exe scan
+# Проверить HTML
+.\sysscope.exe scan --format html
+# Проверить History
+.\sysscope.exe history
+# Проверить Compare
+.\sysscope.exe scan
+# Проверить список .json
+dir *.json
+# Сравнить 2 .json
+.\sysscope.exe compare первый.json второй.json
+# Проверить Live
+.\sysscope.exe live
 ```
 
 ### Пример вывода
