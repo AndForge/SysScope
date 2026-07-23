@@ -277,11 +277,6 @@ Docker
 
 - GPU, monitors and battery are usually unavailable
 
----
-
-
----
-
 # 📄 License
 
 MIT License © 2025 AndForge
