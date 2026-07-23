@@ -722,17 +722,15 @@ func historyDir() string {
 		home = "."
 	}
 	dir := filepath.Join(home, ".sysscope", "history")
-if err := os.MkdirAll(dir, 0755); err != nil {
-	fmt.Printf("failed to create history directory: %v\n", err)
-}}
+	_ = os.MkdirAll(dir, 0755)
+	return dir
+}
 
 func saveToHistory(data []byte, ext string) {
 	dir := historyDir()
 	ts := time.Now().Format("20060102_150405")
 	path := filepath.Join(dir, fmt.Sprintf("scan_%s.%s", ts, ext))
-	if err := os.WriteFile(path, data, 0644); err != nil {
-	fmt.Printf("failed to save history: %v\n", err)
-}
+	_ = os.WriteFile(path, data, 0644)
 }
 
 func listHistory() error {
