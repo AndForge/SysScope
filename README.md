@@ -10,7 +10,7 @@ SysScope collects real hardware, software and security information from your com
 
 ---
 
-# ✨ Features
+## ✨ Features
 
 - ✅ Cross-platform (Windows, Linux, macOS)
 - ✅ Hardware & software inventory
@@ -25,7 +25,7 @@ SysScope collects real hardware, software and security information from your com
 
 ---
 
-# 📸 Screenshots
+## 📸 Screenshots
 
 Live Dashboard
 
@@ -33,7 +33,7 @@ Live Dashboard
 
 ---
 
-# 🚀 Quick Start
+## 🚀 Quick Start
 
 ## Clone
 
@@ -56,7 +56,7 @@ go build
 
 ---
 
-# 💻 Usage
+## 💻 Usage
 
 Generate JSON report
 
@@ -114,7 +114,7 @@ Windows executable example
 
 ---
 
-# 📋 Example Output
+## 📋 Example Output
 
 ```text
 🔍 Scanning system...
@@ -133,7 +133,7 @@ Windows executable example
 
 ---
 
-# 📊 Collected Information
+## 📊 Collected Information
 
 | Module | Windows | Linux | macOS |
 |----------|----------|----------|----------|
@@ -152,7 +152,7 @@ Windows executable example
 
 ---
 
-# 🏗 Architecture
+## 🏗 Architecture
 
 ```
 CLI (Cobra)
@@ -174,7 +174,7 @@ Project follows Clean Architecture.
 
 ---
 
-# 📁 Project Structure
+## 📁 Project Structure
 
 ```text
 sysscope/
@@ -191,7 +191,7 @@ sysscope/
 
 ---
 
-# 📈 Health Score
+## 📈 Health Score
 
 The Health Score is calculated using several system metrics.
 
@@ -207,7 +207,7 @@ Maximum score: 100
 
 ---
 
-# 🔒 Security Score
+## 🔒 Security Score
 
 The Security Score evaluates system protection.
 
@@ -225,7 +225,7 @@ Maximum score: 100
 
 ---
 
-# 🧪 Testing
+## 🧪 Testing
 
 ```bash
 go test ./...
@@ -247,7 +247,7 @@ for
 
 ---
 
-# 📦 Dependencies
+## 📦 Dependencies
 
 | Package | Purpose |
 |----------|----------|
@@ -257,7 +257,7 @@ for
 
 ---
 
-# ⚠ Limitations
+## ⚠ Limitations
 
 Linux
 
