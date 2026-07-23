@@ -48,7 +48,6 @@ type liveCache struct {
 	secScore    domain.Score
 	hostname    string
 	osInfo      *domain.OSInfo
-	uptime      string
 	// Network IO tracking
 	netBytesRecvPrev uint64
 	netBytesSentPrev uint64
@@ -418,7 +417,7 @@ func startLiveServer(port int) error {
 	addr := fmt.Sprintf(":%d", port)
 
 	// Initialize hostname & platform
-	hostname, _ := fmt.Sprintf(""), error(nil)
+	hostname, _ := ""
 	if h, err := hostName(); err == nil {
 		hostname = h
 	}
@@ -490,18 +489,27 @@ func startLiveServer(port int) error {
 	fmt.Printf("Press Ctrl+C to stop.\n\n")
 
 	// Auto-open browser
-	go func() {
-		time.Sleep(800 * time.Millisecond)
-		url := fmt.Sprintf("http://localhost%s", addr)
-		switch runtimeOS.GOOS {
-		case "windows":
-			exec.Command("cmd", "/c", "start", url).Run()
-		case "darwin":
-			exec.Command("open", url).Run()
-		default:
-			exec.Command("xdg-open", url).Run()
-		}
-	}()
+go func() {
+	time.Sleep(800 * time.Millisecond)
+
+	url := fmt.Sprintf("http://localhost%s", addr)
+
+	var err error
+
+	switch runtimeOS.GOOS {
+	case "windows":
+		err = exec.Command("cmd", "/c", "start", url).Run()
+	case "darwin":
+		err = exec.Command("open", url).Run()
+	default:
+		err = exec.Command("xdg-open", url).Run()
+	}
+
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "failed to open browser: %v\n", err)
+	}
+}()
+	
 
 	// Serve with silent error handler
 	srv := &http.Server{Handler: http.DefaultServeMux}
