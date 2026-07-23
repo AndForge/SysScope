@@ -29,7 +29,7 @@ SysScope collects real hardware, software and security information from your com
 
 Live Dashboard
 
-> _(Add screenshot here later)_
+> <img width="1906" height="971" alt="2026-07-23_18-20-06" src="https://github.com/user-attachments/assets/3dd102f3-3d05-4ad0-bca3-7498f0da900e" />
 
 ---
 
@@ -277,7 +277,7 @@ Docker
 
 - GPU, monitors and battery are usually unavailable
 
----<img width="1906" height="971" alt="2026-07-23_18-20-06" src="https://github.com/user-attachments/assets/3dd102f3-3d05-4ad0-bca3-7498f0da900e" />
+---
 
 
 ---
