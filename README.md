@@ -168,16 +168,6 @@ go build -race ./...      # race detector
 | `github.com/spf13/cobra` | CLI framework |
 | `golang.org/x/sys` | Windows API (syscall, unsafe) |
 
-## 🔮 Планы
-
-- [ ] TUI на Bubble Tea
-- [ ] S.M.A.R.T. для дисков
-- [ ] GPU-информация (NVML, ADL)
-- [ ] Мониторинг в реальном времени
-- [ ] Плагины через gRPC
-- [ ] REST API сервер
-- [ ] Экспорт в PDF
-
 ## ⚠️ Ограничения
 
 - **Linux**: DMI-информация (BIOS, motherboard) требует root
